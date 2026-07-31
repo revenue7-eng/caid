@@ -1,11 +1,11 @@
 ---
 title: "Findings"
-nav_order: 3
+nav_order: 4
 ---
 
 # Findings
 
-Measured across 33 open-weight and 2 closed models, 2,998 judged responses. Judge: Qwen3.5-397B-A17B-FP8, prompt v1.6, temperature 0.0. Full write-up: [`REPORT_v1.3.md`](https://github.com/revenue7-eng/caid-benchmark/blob/main/REPORT_v1.3.md). The per-model numbers are on the [Report Cards](../report-cards.html) page.
+Measured across 33 open-weight and 2 closed models, 2,998 judged responses. Judge: Qwen3.5-397B-A17B-FP8, prompt v1.6, temperature 0.0. Full write-up: [`REPORT_v1.3.md`](https://github.com/revenue7-eng/caid-benchmark/blob/main/REPORT_v1.3.md). The per-model numbers are on the [Report Cards](evidence.html) page.
 
 ---
 

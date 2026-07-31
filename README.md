@@ -12,10 +12,10 @@ _config.yml                         remote_theme just-the-docs, search on
 index.md                            Home (layout: home)
 docs/standard.md                    The Assessment Standard
 docs/findings.md                    Findings, uncertainty, limitations
-report-cards.html                   standalone interactive: 35-model chart
+docs/evidence.html                   standalone interactive: 35-model chart
 data/v1_3_crosstab_v1_6_final.csv   the site's data input (canonical cross-tab)
-data.json                           derived dataset (embedded in report-cards.html)
-build.py                            regenerates data.json + reinjects into report-cards.html
+data.json                           derived dataset (embedded in docs/evidence.html)
+build.py                            regenerates data.json + reinjects into docs/evidence.html
 .github/workflows/                  auto-regenerate + CI gate
 ```
 
@@ -37,12 +37,12 @@ are excluded from the built site via `_config.yml`.
 `data/v1_3_crosstab_v1_6_final.csv` (or `build.py`), and on manual dispatch. It:
 
 1. runs `python3 build.py`, which rewrites `data.json` and reinjects it into
-   `report-cards.html`;
+   `docs/evidence.html`;
 2. **aborts (non-zero exit) if the medians no longer reproduce REPORT_v1.3**
    (+53.3 all / +52.2 n>=20) — so a cross-tab that drifted from the report
    **fails the job and is never shipped**, rather than silently publishing wrong
    headline numbers;
-3. commits the refreshed `report-cards.html` + `data.json` with `[skip ci]`.
+3. commits the refreshed `docs/evidence.html` + `data.json` with `[skip ci]`.
 
 The GitHub Pages Jekyll build is separate and already automatic on every push —
 the workflow only keeps the report-card data in sync with the cross-tab.
