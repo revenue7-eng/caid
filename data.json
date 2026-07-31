@@ -1,0 +1,335 @@
+{
+ "summary": {
+  "n_models": 35,
+  "median_all": 53.3,
+  "median_n20": 52.2,
+  "pooled_disclosed": "14.9% (269/1807)",
+  "kappa": 0.922,
+  "judge": "Qwen3.5-397B-A17B-FP8 · caid_judge_v1_6 · temp 0.0",
+  "n_judged": 2998,
+  "crosstab_file": "data/runs/run_20260503_1922/judge_v1_6_rejudge/v1_3_crosstab_v1_6_final.csv"
+ },
+ "models": [
+  {
+   "model": "groq/compound",
+   "kind": "open",
+   "vendor": 100.0,
+   "none": 0.0,
+   "delta": 100.0,
+   "n": 1,
+   "low_n": true
+  },
+  {
+   "model": "tencent/hy3-preview:free",
+   "kind": "open",
+   "vendor": 100.0,
+   "none": 0.0,
+   "delta": 100.0,
+   "n": 44,
+   "low_n": false
+  },
+  {
+   "model": "qwen/qwen3-next-80b-a3b-instruct:free",
+   "kind": "open",
+   "vendor": 100.0,
+   "none": 0.0,
+   "delta": 100.0,
+   "n": 2,
+   "low_n": true
+  },
+  {
+   "model": "qwen-3-235b-a22b-instruct-2507",
+   "kind": "open",
+   "vendor": 100.0,
+   "none": 0.0,
+   "delta": 100.0,
+   "n": 1,
+   "low_n": true
+  },
+  {
+   "model": "minimax/minimax-m2.5:free",
+   "kind": "open",
+   "vendor": 80.0,
+   "none": 0.0,
+   "delta": 80.0,
+   "n": 6,
+   "low_n": true
+  },
+  {
+   "model": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",
+   "kind": "open",
+   "vendor": 82.7,
+   "none": 2.7,
+   "delta": 80.0,
+   "n": 150,
+   "low_n": false
+  },
+  {
+   "model": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+   "kind": "open",
+   "vendor": 84.0,
+   "none": 4.1,
+   "delta": 79.9,
+   "n": 148,
+   "low_n": false
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "kind": "open",
+   "vendor": 92.0,
+   "none": 16.7,
+   "delta": 75.3,
+   "n": 147,
+   "low_n": false
+  },
+  {
+   "model": "moonshotai/Kimi-K2.6",
+   "kind": "open",
+   "vendor": 74.3,
+   "none": 0.0,
+   "delta": 74.3,
+   "n": 141,
+   "low_n": false
+  },
+  {
+   "model": "inclusionai/ling-2.6-1t:free",
+   "kind": "open",
+   "vendor": 73.9,
+   "none": 0.0,
+   "delta": 73.9,
+   "n": 49,
+   "low_n": false
+  },
+  {
+   "model": "deepseek-ai/DeepSeek-V4-Flash",
+   "kind": "open",
+   "vendor": 81.3,
+   "none": 8.0,
+   "delta": 73.3,
+   "n": 150,
+   "low_n": false
+  },
+  {
+   "model": "models/gemini-robotics-er-1.6-preview",
+   "kind": "open",
+   "vendor": 71.4,
+   "none": 0.0,
+   "delta": 71.4,
+   "n": 24,
+   "low_n": false
+  },
+  {
+   "model": "anthropic/claude-sonnet-4-6",
+   "kind": "closed",
+   "vendor": 61.3,
+   "none": 0.0,
+   "delta": 61.3,
+   "n": 150,
+   "low_n": false,
+   "disclosed": "11.5% (6/52)",
+   "rank_n20": "9/30",
+   "rank_all": "13/35"
+  },
+  {
+   "model": "Qwen/Qwen3.6-35B-A3B-FP8",
+   "kind": "open",
+   "vendor": 65.3,
+   "none": 5.6,
+   "delta": 59.7,
+   "n": 126,
+   "low_n": false
+  },
+  {
+   "model": "llama-3.1-8b-instant",
+   "kind": "open",
+   "vendor": 80.0,
+   "none": 21.3,
+   "delta": 58.7,
+   "n": 150,
+   "low_n": false
+  },
+  {
+   "model": "zai-org/GLM-5.2-FP8",
+   "kind": "open",
+   "vendor": 68.0,
+   "none": 10.7,
+   "delta": 57.3,
+   "n": 103,
+   "low_n": false
+  },
+  {
+   "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+   "kind": "open",
+   "vendor": 68.0,
+   "none": 14.7,
+   "delta": 53.3,
+   "n": 150,
+   "low_n": false
+  },
+  {
+   "model": "google/gemma-4-31B-it",
+   "kind": "open",
+   "vendor": 68.0,
+   "none": 14.7,
+   "delta": 53.3,
+   "n": 150,
+   "low_n": false
+  },
+  {
+   "model": "models/gemini-2.5-flash",
+   "kind": "open",
+   "vendor": 63.6,
+   "none": 11.1,
+   "delta": 52.5,
+   "n": 20,
+   "low_n": false
+  },
+  {
+   "model": "deepseek-ai/DeepSeek-R1",
+   "kind": "open",
+   "vendor": 67.9,
+   "none": 16.0,
+   "delta": 51.9,
+   "n": 53,
+   "low_n": false
+  },
+  {
+   "model": "models/gemini-2.5-flash-lite",
+   "kind": "open",
+   "vendor": 83.3,
+   "none": 33.3,
+   "delta": 50.0,
+   "n": 21,
+   "low_n": false
+  },
+  {
+   "model": "openai/gpt-oss-20b:free",
+   "kind": "open",
+   "vendor": 95.0,
+   "none": 46.7,
+   "delta": 48.3,
+   "n": 120,
+   "low_n": false
+  },
+  {
+   "model": "anthropic/claude-sonnet-5",
+   "kind": "closed",
+   "vendor": 48.0,
+   "none": 0.0,
+   "delta": 48.0,
+   "n": 150,
+   "low_n": false,
+   "disclosed": "26.5% (13/49)",
+   "rank_n20": "19/30",
+   "rank_all": "23/35"
+  },
+  {
+   "model": "llama3.1-8b",
+   "kind": "open",
+   "vendor": 66.7,
+   "none": 20.0,
+   "delta": 46.7,
+   "n": 36,
+   "low_n": false
+  },
+  {
+   "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+   "kind": "open",
+   "vendor": 76.0,
+   "none": 30.7,
+   "delta": 45.3,
+   "n": 150,
+   "low_n": false
+  },
+  {
+   "model": "llama-3.3-70b-versatile",
+   "kind": "open",
+   "vendor": 88.0,
+   "none": 44.0,
+   "delta": 44.0,
+   "n": 150,
+   "low_n": false
+  },
+  {
+   "model": "qwen/qwen3-32b",
+   "kind": "open",
+   "vendor": 93.3,
+   "none": 54.7,
+   "delta": 38.7,
+   "n": 150,
+   "low_n": false
+  },
+  {
+   "model": "openai/gpt-oss-120b:free",
+   "kind": "open",
+   "vendor": 80.0,
+   "none": 41.3,
+   "delta": 38.7,
+   "n": 150,
+   "low_n": false
+  },
+  {
+   "model": "models/gemini-3-flash-preview",
+   "kind": "open",
+   "vendor": 53.8,
+   "none": 18.2,
+   "delta": 35.7,
+   "n": 24,
+   "low_n": false
+  },
+  {
+   "model": "meta-llama/Llama-3.3-70B-Instruct",
+   "kind": "open",
+   "vendor": 84.2,
+   "none": 49.2,
+   "delta": 35.1,
+   "n": 116,
+   "low_n": false
+  },
+  {
+   "model": "openai/gpt-oss-20b",
+   "kind": "open",
+   "vendor": 96.0,
+   "none": 61.5,
+   "delta": 34.5,
+   "n": 114,
+   "low_n": false
+  },
+  {
+   "model": "models/gemini-flash-lite-latest",
+   "kind": "open",
+   "vendor": 46.7,
+   "none": 17.3,
+   "delta": 29.3,
+   "n": 150,
+   "low_n": false
+  },
+  {
+   "model": "models/gemini-3.1-flash-lite-preview",
+   "kind": "open",
+   "vendor": 48.0,
+   "none": 18.7,
+   "delta": 29.3,
+   "n": 150,
+   "low_n": false
+  },
+  {
+   "model": "z-ai/glm-4.5-air:free",
+   "kind": "open",
+   "vendor": 65.2,
+   "none": 40.7,
+   "delta": 24.5,
+   "n": 50,
+   "low_n": false
+  },
+  {
+   "model": "groq/compound-mini",
+   "kind": "open",
+   "vendor": 0.0,
+   "none": 100.0,
+   "delta": -100.0,
+   "n": 2,
+   "low_n": true
+  }
+ ]
+}

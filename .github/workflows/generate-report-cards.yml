@@ -1,0 +1,36 @@
+name: Generate Report Cards Data
+
+# Regenerates the report-cards dataset from the in-repo cross-tab whenever it
+# changes, then commits the refreshed report-cards.html + data.json.
+# build.py exits non-zero if the medians no longer reproduce REPORT_v1.3, so
+# this job doubles as a CI gate: headline numbers that drift from the report
+# fail the build instead of shipping. Same shape as the-autonomous-stack's
+# generate-catalog.yml (source data lives in the site repo, views derive from it).
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'data/v1_3_crosstab_v1_6_final.csv'
+      - 'build.py'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Regenerate report-cards data (aborts if medians != REPORT_v1.3)
+        run: python3 build.py
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add report-cards.html data.json
+          git diff --cached --quiet || git commit -m "Auto-update report-cards data [skip ci]"
+          git push

@@ -1,0 +1,18 @@
+title: CAID
+description: Compliance Alignment Integrity Diagnostic — an open specification for measuring vendor-induced compliance drift in deployed AI assistants. Regulatory evidence, not a leaderboard.
+
+remote_theme: just-the-docs/just-the-docs
+
+search_enabled: true
+
+aux_links:
+  GitHub:
+    - https://github.com/revenue7-eng/caid-benchmark
+
+# order of top-level nav is controlled by nav_order in each page's front matter
+
+exclude:
+  - build.py
+  - data/
+  - README.md
+  - .github/
