@@ -58,3 +58,14 @@ or fails loudly. Closed-model disclosed-rate / rank live in the `ENRICH` dict in
   designated (Goodhart / defeat-device).
 - **No composite score**; norm-referenced to the open-model composite.
 - **Open core only** — operator assets are not part of this site.
+
+## Per-model pages (Models section)
+
+`build_models.py` reads `data/per_cell.json` (role × pressure × condition
+violation rates, derived from the v1.6 judged corpus and validated to reproduce
+the cross-tab) and generates one static heatmap page per model under
+`docs/models/`, plus the `Models` index. The pages are pure static HTML — no
+JavaScript — so they embed natively in the theme (no Liquid/iframe needed). The
+generator aborts if any model's per-cell aggregate no longer matches its
+cross-tab rate. `per_cell.json` is produced in `caid-benchmark` from the judged
+corpus; only the 30 models with n ≥ 20 get a per-model page.

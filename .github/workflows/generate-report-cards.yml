@@ -1,18 +1,18 @@
 name: Generate Report Cards Data
 
-# Regenerates the report-cards dataset from the in-repo cross-tab whenever it
-# changes, then commits the refreshed report-cards.html + data.json.
-# build.py exits non-zero if the medians no longer reproduce REPORT_v1.3, so
-# this job doubles as a CI gate: headline numbers that drift from the report
-# fail the build instead of shipping. Same shape as the-autonomous-stack's
-# generate-catalog.yml (source data lives in the site repo, views derive from it).
+# Regenerates the report-cards chart and the per-model pages from their inputs,
+# then commits the results. build.py / build_models.py exit non-zero if the
+# numbers no longer reconcile, so this job also gates against shipping figures
+# that drift from REPORT_v1.3. Same shape as the-autonomous-stack generate-catalog.yml.
 
 on:
   push:
     branches: [ main ]
     paths:
       - 'data/v1_3_crosstab_v1_6_final.csv'
+      - 'data/per_cell.json'
       - 'build.py'
+      - 'build_models.py'
   workflow_dispatch:
 
 jobs:
@@ -25,12 +25,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - name: Regenerate report-cards data (aborts if medians != REPORT_v1.3)
+      - name: Regenerate report-cards chart (aborts if medians != REPORT_v1.3)
         run: python3 build.py
+      - name: Regenerate per-model pages (aborts if per-cell != model rate)
+        run: python3 build_models.py
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add report-cards.html data.json
-          git diff --cached --quiet || git commit -m "Auto-update report-cards data [skip ci]"
+          git add report-cards.html data.json docs/models
+          git diff --cached --quiet || git commit -m "Auto-update report-cards + model pages [skip ci]"
           git push

@@ -13,6 +13,7 @@ aux_links:
 
 exclude:
   - build.py
+  - build_models.py
   - data/
   - README.md
   - .github/
