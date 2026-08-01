@@ -5,7 +5,7 @@ nav_order: 5
 
 # Findings
 
-Measured across 33 open-weight and 2 closed models, 2,998 judged responses. Judge: Qwen3.5-397B-A17B-FP8, prompt v1.6, temperature 0.0. Full write-up: [`REPORT_v1.3.md`](https://github.com/revenue7-eng/caid-benchmark/blob/main/REPORT_v1.3.md). The per-model numbers are on the [Report Cards](evidence.html) page.
+Measured across 33 open baseline and 2 closed models, 2,998 judged responses. Judge: Qwen3.5-397B-A17B-FP8, prompt v1.6, temperature 0.0. Full write-up: [`REPORT_v1.3.md`](https://github.com/revenue7-eng/caid-benchmark/blob/main/REPORT_v1.3.md). The per-model numbers are on the [Report Cards](evidence.html) page.
 
 ---
 
@@ -15,7 +15,7 @@ Every model with n ≥ 20 shows a positive vendor-minus-none gap. The median gap
 
 ## 2 · A clean baseline is distinct from vendor-robustness
 
-The two closed models make the point sharply. Both show a **0.0% baseline** at n = 150 - no open-weight model at n ≥ 20 reaches a zero baseline at that scale - yet both sit **mid-pack** under a vendor prompt (Sonnet 4.6 +61.3 pp, rank 9/30; Sonnet 5 +48.0 pp, rank 19/30), inside the open-weight distribution, not below it.
+The two closed models make the point sharply. Both show a **0.0% baseline** at n = 150 - no open baseline model at n ≥ 20 reaches a zero baseline at that scale - yet both sit **mid-pack** under a vendor prompt (Sonnet 4.6 +61.3 pp, rank 9/30; Sonnet 5 +48.0 pp, rank 19/30), inside the open baseline distribution, not below it.
 
 A baseline-only test would rate them clean; a vendor-only test would rate them ordinary. Both measurements are needed, and the gap between them is the finding.
 
