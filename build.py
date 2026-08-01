@@ -6,9 +6,9 @@ What it does:
   1. reads the v1.6 final cross-tab CSV (one row per model),
   2. enriches the two closed models with disclosed-rate / rank (from REPORT_v1.3),
   3. validates that the medians reproduce REPORT_v1.3 (+53.3 all / +52.2 n>=20),
-  4. writes data.json AND reinjects it into docs/evidence.html in place.
+  4. writes data.json AND reinjects it into report-cards.html in place.
 
-docs/evidence.html carries its data inline, so after running this the single file is
+report-cards.html carries its data inline, so after running this the single file is
 deployable as-is. Nothing else needs data.json at runtime.
 
 Usage:
@@ -101,12 +101,12 @@ def main():
     payload_json = json.dumps(payload, ensure_ascii=False, indent=1)
 
     open(os.path.join(HERE, "data.json"), "w", encoding="utf-8").write(payload_json)
-    reinject(os.path.join(HERE, "docs", "evidence.html"), payload_json)
+    reinject(os.path.join(HERE, "report-cards.html"), payload_json)
 
     s = payload["summary"]
     print(f"[ok] {s['n_models']} models · median +{s['median_all']} (all) / "
           f"+{s['median_n20']} (n>=20) · reproduced REPORT_v1.3")
-    print("[ok] wrote data.json and reinjected into docs/evidence.html")
+    print("[ok] wrote data.json and reinjected into report-cards.html")
 
 
 if __name__ == "__main__":
