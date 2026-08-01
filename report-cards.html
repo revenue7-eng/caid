@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>CAID — Report Cards</title>
+<title>CAID - Report Cards</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
@@ -17,7 +17,7 @@
   --rule:#ccd6db;       /* hairline */
   --rule-2:#dde4e8;
   --calm:#33708f;       /* clean / none end */
-  --drift:#9e1b32;      /* vendor pull — the one bold colour */
+  --drift:#9e1b32;      /* vendor pull - the one bold colour */
   --drift-soft:#c26a78;
   --closed:#1d3b4a;     /* closed-model marker */
   --shadow:0 1px 0 rgba(22,35,46,.04), 0 8px 24px -18px rgba(22,35,46,.5);
@@ -212,13 +212,13 @@ footer a{color:var(--calm)}
 
     <div class="meter">
       <div class="meter-head">
-        <span class="t">Open-model composite &mdash; <b>undisclosed recommendation on a denied action</b></span>
+        <span class="t">Open-model composite - <b>undisclosed recommendation on a denied action</b></span>
         <span class="meter-delta" id="mDelta">+52.2 pp</span>
       </div>
       <div class="track" id="track">
         <div class="span" id="span"></div>
-        <div class="pt none" id="ptNone"><span class="dot"></span><span class="lbl">no vendor prompt<b id="noneV">—</b></span></div>
-        <div class="pt vendor" id="ptVendor"><span class="dot"></span><span class="lbl">vendor prompt<b id="vendorV">—</b></span></div>
+        <div class="pt none" id="ptNone"><span class="dot"></span><span class="lbl">no vendor prompt<b id="noneV"> - </b></span></div>
+        <div class="pt vendor" id="ptVendor"><span class="dot"></span><span class="lbl">vendor prompt<b id="vendorV"> - </b></span></div>
       </div>
       <div class="axis"><span>0%</span><span>50%</span><span>100%</span></div>
       <div class="meter-foot">
@@ -232,7 +232,7 @@ footer a{color:var(--calm)}
 <!-- 02 EVIDENCE -->
 <section id="evidence">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">02</span><h2>Report Cards &mdash; 35 models</h2></div>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Report Cards - 35 models</h2></div>
     <p class="sec-sub">Each bar spans from the model’s clean baseline (left, no vendor prompt) to its behaviour under a vendor prompt (right). The span is the vendor effect. The dashed line marks the open-model composite median (n&nbsp;≥&nbsp;20). Judge: Qwen3.5-397B-A17B-FP8, prompt v1.6, temperature 0.0; 2,998 judged responses.</p>
 
     <div class="controls">
@@ -263,7 +263,7 @@ footer a{color:var(--calm)}
     <div class="explorer">
       <p class="k">Phase 2</p>
       <h3>Held until the public/private battery split is designated</h3>
-      <p>Publishing raw responses exposes the individual battery scenarios. Once a battery is public, the model under test can be tuned against it and the measurement loses its meaning (Goodhart), and a switchable audit prompt can be disabled during testing (defeat-device). CAID therefore splits the battery into an open half — for trust and reproducibility — and a private half for formal assessment, before any raw scenarios are published.</p>
+      <p>Publishing raw responses exposes the individual battery scenarios. Once a battery is public, the model under test can be tuned against it and the measurement loses its meaning (Goodhart), and a switchable audit prompt can be disabled during testing (defeat-device). CAID therefore splits the battery into an open half - for trust and reproducibility - and a private half for formal assessment, before any raw scenarios are published.</p>
       <p>Until then, the aggregate results above are drawn only from the published cross-tab; no individual battery item is revealed.</p>
     </div>
   </div>
@@ -664,7 +664,7 @@ footer a{color:var(--calm)}
     main.forEach(function(m){rowsEl.appendChild(makeRow(m));});
     if(low.length){
       var sh=document.createElement("div"); sh.className="subhead";
-      sh.textContent="LOW-n (n ≤ 6) — shown for completeness, no per-model claim";
+      sh.textContent="LOW-n (n ≤ 6) - shown for completeness, no per-model claim";
       rowsEl.appendChild(sh);
       low.forEach(function(m){rowsEl.appendChild(makeRow(m));});
     }
@@ -708,16 +708,16 @@ footer a{color:var(--calm)}
       '<div class="cstat"><span class="lbl">vendor violation</span><span class="val drift">'+m.vendor.toFixed(1)+'%</span></div>'+
       '<div class="cstat"><span class="lbl">clean baseline</span><span class="val calm">'+m.none.toFixed(1)+'%</span></div>'+
       '<div class="cstat"><span class="lbl">vendor effect</span><span class="val">+'+m.delta.toFixed(1)+' pp</span></div>'+
-      '<div class="cstat"><span class="lbl">disclosed rate</span><span class="val">'+(m.disclosed||"—")+'</span></div>'+
-      '<div class="cstat"><span class="lbl">rank by Δ (n≥20)</span><span class="val">'+(m.rank_n20||"—")+'</span></div>'+
+      '<div class="cstat"><span class="lbl">disclosed rate</span><span class="val">'+(m.disclosed||" - ")+'</span></div>'+
+      '<div class="cstat"><span class="lbl">rank by Δ (n≥20)</span><span class="val">'+(m.rank_n20||" - ")+'</span></div>'+
       '</div>';
   }
   document.getElementById("closedCard").innerHTML=
-    '<p class="k">The two closed models — read them on two axes</p>'+
+    '<p class="k">The two closed models - read them on two axes</p>'+
     '<h3>Mid-pack under pressure, yet the only clean baselines</h3>'+
     '<div class="ccols">'+closed.map(cModel).join("")+'</div>'+
     '<p class="closed-note">Two facts point in opposite directions and both matter. '+
-    '<b>Under a vendor prompt they are not clean</b> — they sit inside the open-weight distribution, mid-pack, not below it. '+
+    '<b>Under a vendor prompt they are not clean</b> - they sit inside the open-weight distribution, mid-pack, not below it. '+
     'Yet they are <b>the only models with a 0.0% baseline at n=150</b>: no open-weight model at n≥20 reaches a zero baseline at that scale. '+
     'A baseline-only test would rate them clean; a vendor-only test would rate them ordinary. The gap between the two readings is the finding.</p>';
 

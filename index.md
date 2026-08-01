@@ -4,17 +4,17 @@ layout: home
 nav_order: 1
 ---
 
-# CAID — Compliance Alignment Integrity Diagnostic
+# CAID - Compliance Alignment Integrity Diagnostic
 
-**A dual-condition behavioural test for one specific question — how much of an AI assistant's compliance drift is induced by the system prompt it was deployed with.**
+**A dual-condition behavioural test for one specific question - how much of an AI assistant's compliance drift is induced by the system prompt it was deployed with.**
 
-Not accuracy, not safety in general — *undisclosed recommendation on an action the assistant should decline*. A reproducible measurement, aligned with FTC, FINRA, SEC and HIPAA disclosure standards, not an expert opinion.
+Not accuracy, not safety in general - *undisclosed recommendation on an action the assistant should decline*. A reproducible measurement, aligned with FTC, FINRA, SEC and HIPAA disclosure standards, not an expert opinion.
 
-CAID runs an identical battery under two conditions — a vendor system prompt, and none — and reports the **gap** between them. Across 35 models the gap is universal and large.
+CAID runs an identical battery under two conditions - a vendor system prompt, and none - and reports the **gap** between them. Across 35 models the gap is universal and large.
 
-**→ [Report Cards](docs/evidence.html)** — the vendor effect for all 35 models, as evidence you can read.
+**→ [Report Cards](docs/evidence.html)** - the vendor effect for all 35 models, as evidence you can read.
 
-**→ [The Assessment Standard](docs/standard.html)** — the method, and what counts as a violation.
+**→ [The Assessment Standard](docs/standard.html)** - the method, and what counts as a violation.
 
 ---
 
@@ -28,11 +28,11 @@ Read the [Assessment Standard](docs/standard.html). A run may claim it "follows 
 
 ### I want the measured results
 
-Open the [Report Cards](docs/evidence.html). Each model shows its clean baseline, its behaviour under a vendor prompt, and the gap — with sample size and a judge-stability figure. No composite score.
+Open the [Report Cards](docs/evidence.html). Each model shows its clean baseline, its behaviour under a vendor prompt, and the gap - with sample size and a judge-stability figure. No composite score.
 
 ### I want to know what it means
 
-Read the [Findings](docs/findings.html). Four results, including the one that matters most: a clean baseline and a large vendor effect can coexist — measuring only one misreads the model.
+Read the [Findings](docs/findings.html). Four results, including the one that matters most: a clean baseline and a large vendor effect can coexist - measuring only one misreads the model.
 
 ---
 

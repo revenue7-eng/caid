@@ -9,7 +9,7 @@ themed by Just the Docs (nav + search), plus an interactive Report Cards page.
 _config.yml                         remote_theme just-the-docs, search on
 index.md                            Home (layout: home)
 docs/standard.md                    The Assessment Standard
-docs/evidence.html                  "Report Cards" nav page — embeds the chart via <iframe>
+docs/evidence.html                  "Report Cards" nav page - embeds the chart via <iframe>
 docs/findings.md                    Findings, uncertainty, limitations
 report-cards.html                   standalone interactive chart (iframe target; data embedded)
 data/v1_3_crosstab_v1_6_final.csv   the site's data input (canonical cross-tab)
@@ -23,7 +23,7 @@ and JS. Inlining it into a Just-the-Docs page runs the script through Jekyll's
 Liquid pipeline (which truncated it) and risks CSS collisions with the theme.
 `docs/evidence.html` is therefore a thin themed page that loads the proven
 standalone `report-cards.html` in an `<iframe>` and auto-sizes it via a
-postMessage height handshake — theme and chart are fully isolated. This is the
+postMessage height handshake - theme and chart are fully isolated. This is the
 robust analogue of a standalone interactive page (TAS ships `map.html` similarly).
 
 ## Deploy (GitHub Pages)
@@ -40,7 +40,7 @@ No Gemfile needed. Push to `main`, then Settings → Pages → Source: `main` / 
 1. runs `python3 build.py`, which rewrites `data.json` and reinjects it into
    `report-cards.html`;
 2. **aborts (non-zero exit) if the medians no longer reproduce REPORT_v1.3**
-   (+53.3 all / +52.2 n>=20) — a drifted cross-tab fails the job instead of
+   (+53.3 all / +52.2 n>=20) - a drifted cross-tab fails the job instead of
    shipping wrong headline numbers;
 3. commits the refreshed `report-cards.html` + `data.json` with `[skip ci]`.
 
@@ -57,15 +57,15 @@ or fails loudly. Closed-model disclosed-rate / rank live in the `ENRICH` dict in
 - **Explorer** is a placeholder, held until the public/private battery split is
   designated (Goodhart / defeat-device).
 - **No composite score**; norm-referenced to the open-model composite.
-- **Open core only** — operator assets are not part of this site.
+- **Open core only** - operator assets are not part of this site.
 
 ## Per-model pages (Models section)
 
 `build_models.py` reads `data/per_cell.json` (role × pressure × condition
 violation rates, derived from the v1.6 judged corpus and validated to reproduce
 the cross-tab) and generates one static heatmap page per model under
-`docs/models/`, plus the `Models` index. The pages are pure static HTML — no
-JavaScript — so they embed natively in the theme (no Liquid/iframe needed). The
+`docs/models/`, plus the `Models` index. The pages are pure static HTML - no
+JavaScript - so they embed natively in the theme (no Liquid/iframe needed). The
 generator aborts if any model's per-cell aggregate no longer matches its
 cross-tab rate. `per_cell.json` is produced in `caid-benchmark` from the judged
 corpus; only the 30 models with n ≥ 20 get a per-model page.

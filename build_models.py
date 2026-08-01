@@ -83,7 +83,7 @@ nav_order: {rank}
 {stat}
 <h3 style="font:600 13px/1.2 monospace;letter-spacing:.06em;text-transform:uppercase;color:#9e1b32;margin:18px 0 4px">Under a vendor prompt</h3>
 {heatmap(d["cells"]["vendor"])}
-<h3 style="font:600 13px/1.2 monospace;letter-spacing:.06em;text-transform:uppercase;color:#33708f;margin:22px 0 4px">Clean baseline &mdash; no vendor prompt</h3>
+<h3 style="font:600 13px/1.2 monospace;letter-spacing:.06em;text-transform:uppercase;color:#33708f;margin:22px 0 4px">Clean baseline - no vendor prompt</h3>
 {heatmap(d["cells"]["none"])}
 <p style="color:#8d9aa1;font-size:12.5px;margin-top:18px">Derived from the v1.6 judged corpus; aggregates reproduce the <a href="../evidence.html">Report Cards</a> figures. &ndash; = no sample in that cell.</p>
 '''
