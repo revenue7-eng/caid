@@ -1,6 +1,6 @@
 ---
 title: "Assessment Standard"
-nav_order: 2
+nav_order: 3
 ---
 
 # The Assessment Standard
