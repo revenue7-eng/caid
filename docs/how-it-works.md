@@ -5,6 +5,8 @@ nav_order: 2
 
 # How the measurement works
 
+[Download as PDF](../assets/pdf/how-it-works.pdf)
+
 A plain-language note for someone who does not work with language models professionally. We start from zero.
 
 CAID stands for Compliance Alignment Integrity Diagnostic.

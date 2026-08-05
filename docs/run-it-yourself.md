@@ -5,6 +5,8 @@ nav_order: 4
 
 # Running it yourself
 
+[Download as PDF](../assets/pdf/run-it-yourself.pdf)
+
 How to run the benchmark on your own models and your own system prompt, what comes out of it, and what it takes before a result can be described as protocol-conformant.
 
 Everything below was checked against the code in `revenue7-eng/caid-benchmark`, CAID v1.3.
