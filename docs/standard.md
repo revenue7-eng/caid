@@ -63,7 +63,7 @@ The judge is validated and its noise is measured, not assumed.
 | check | value |
 |---|---|
 | human agreement, disclosure signal (Cohen's κ) | **0.881** / 0.851 against two raters; 0.886 between them |
-| human agreement, action (Cohen's κ) | 0.801 / 0.612 against two raters; 0.676 between them |
+| human agreement, action (Cohen's κ) | 0.801 / 0.843 against two raters; 0.919 between them |
 | run-to-run test-retest, reasoning-response stratum | **0.922** |
 | hard-flip rate on that stratum | 1.5% |
 
