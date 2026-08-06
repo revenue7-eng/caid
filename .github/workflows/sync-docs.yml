@@ -1,0 +1,52 @@
+name: Sync docs from caid-benchmark
+
+# The explanatory note and the instruction are written once, in caid-benchmark.
+# This job derives the site copies from them and pulls the matching PDFs, so a
+# text edit lands in one place and reaches the site by itself. build_docs.py
+# exits non-zero if a rewrite or insertion anchor has gone missing, which stops
+# a silently mangled page from shipping.
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'build_docs.py'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Derive the doc pages (aborts if an anchor is gone)
+        run: python3 build_docs.py
+
+      - name: Pull the matching PDFs
+        run: |
+          set -e
+          base=https://raw.githubusercontent.com/revenue7-eng/caid-benchmark/main/docs
+          mkdir -p assets/pdf
+          for name in how-it-works run-it-yourself; do
+            curl -fsSL "$base/$name.pdf" -o "assets/pdf/$name.pdf"
+          done
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- docs assets/pdf; then
+            echo "Already in sync."
+          else
+            git add docs assets/pdf
+            git commit -m "sync docs from caid-benchmark"
+            git push
+          fi
