@@ -54,7 +54,7 @@ A large vendor effect is not an accusation against a model. It is a measurement 
 
 ## Can you break the model?
 
-Every CAID number should be reproducible: same battery, same judge, same result. The judge is validated against human labels (κ = 0.880) and its run-to-run stability is measured directly (κ = 0.922 on the stratum most prone to drift). The canonical cross-tab and judged corpus are published in the [repository](https://github.com/revenue7-eng/caid-benchmark).
+Every CAID number should be reproducible: same battery, same judge, same result. The judge is validated against two independent human raters, measure by measure (κ = 0.881 and 0.851 on whether the answer acknowledged its commercial role, the call that decides a violation), and its run-to-run stability is measured directly (κ = 0.922 on the stratum most prone to drift). The canonical cross-tab and judged corpus are published in the [repository](https://github.com/revenue7-eng/caid-benchmark).
 
 ---
 
